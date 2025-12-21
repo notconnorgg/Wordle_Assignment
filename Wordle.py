@@ -1,16 +1,19 @@
 import random
 
 class Colours:
+    #the variable correct is assigned the code to the colour green
     correct = "\033[32m"
     end ='\033[0m'
 
 
-# opens a text file in read only mode, and checks to make sure that they are 5 letters long and is in the latin alphabet
+
 def load_words(filename):
+    # opens a text file in read only mode
     with open(filename, "r") as file:
         return [
             word.strip().lower()
             for word in file
+            #and checks to make sure that they are 5 letters long and is in the latin alphabet
             if len(word.strip()) == 5 and word.strip().isalpha()
         ]
 
