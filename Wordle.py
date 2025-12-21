@@ -17,7 +17,7 @@ def load_words(filename):
             if len(word.strip()) == 5 and word.strip().isalpha()
         ]
 
-# assigns the defenition load_words to the variable words
+# assigns the definition load_words to the variable words
 words = load_words("words.txt")
 
 
@@ -52,7 +52,7 @@ def play_game():
     #sets the guess number to 0 when line is run
     guess_number = 0
 
-    # while the user is under 5 gueses this code will run
+    # while the user is under 5 guesses this code will run
     while guess_number < 5:
         #asks the user to input a 5-letter word
         user_guess=input("Guess a five letter word:").lower()
