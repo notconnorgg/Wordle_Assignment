@@ -53,7 +53,7 @@ def play_game():
     guess_number = 0
 
     # while the user is under 5 guesses this code will run
-    while guess_number < 5:
+    while guess_number < 6:
         #asks the user to input a 5-letter word
         user_guess=input("Guess a five letter word:").lower()
         # checks if the users guess is a  5-letter word
@@ -64,7 +64,7 @@ def play_game():
 
         #checks if the users guess is in the word bank
         if user_guess not in words:
-            print("Please enter an english word")
+            print("Please enter a word in the wordbank")
             continue
 
         # checks if the guess is the same as the wordle
@@ -83,7 +83,7 @@ def play_game():
             print("current guess: ", guess_number)
 
         # if user runs out of guesses it will tell the user the wordle
-        if guess_number == 5:
+        if guess_number == 6:
             print("the word was:", wordle_word)
 
 #sets the variable play to "true"
@@ -94,7 +94,7 @@ while play:
     #asks plater if they wish to play again
     play_again=input("Do you want to play again? (y/n)").lower()
     #if player answers no then it the game thanks them for playing and ends the program
-    if play_again = "n":
+    if play_again == "n":
         print('thanks for playing')
         play = False
 
